@@ -1,6 +1,7 @@
 require 'yt/version'
 require 'yt/constants/geography'
 require 'yt/models/account'
+require 'yt/models/branding_setting'
 require 'yt/models/channel'
 require 'yt/models/claim'
 require 'yt/models/claim_history'

@@ -253,6 +253,10 @@ module Yt
         content_owner_detail.time_linked
       end
 
+    ### BRANDING SETTINGS ###
+
+      has_one :branding_setting
+
     ### ACTIONS (UPLOAD, UPDATE, DELETE) ###
 
       # Deletes the channel’s playlists matching all the given attributes.
@@ -285,6 +289,9 @@ module Yt
         end
         if options[:content_owner_details]
           @content_owner_detail = ContentOwnerDetail.new data: options[:content_owner_details]
+        end
+        if options[:branding_settings]
+          @branding_setting = BrandingSetting.new data: options[:branding_settings]
         end
       end
 
