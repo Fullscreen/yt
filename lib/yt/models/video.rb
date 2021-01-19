@@ -397,6 +397,8 @@ module Yt
       delegate :concurrent_viewers, to: :live_streaming_detail
 
     ### ASSOCIATIONS ###
+      has_many :captions
+
       # @!attribute [r] comments
       #   @return [Yt::Collections::Comments] the video’s comments.
       has_many :comment_threads

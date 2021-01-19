@@ -10,6 +10,7 @@ module Yt
     # @see https://developers.google.com/youtube/v3/docs/playlistItems#resource
     # @see https://developers.google.com/youtube/v3/docs/commentThreads#resource
     # @see https://developers.google.com/youtube/v3/docs/comments#resource
+    # @see https://developers.google.com/youtube/v3/docs/captions#resource
     class Snippet < Base
       attr_reader :data
 
@@ -37,6 +38,10 @@ module Yt
       has_attribute :parent_id
       has_attribute :like_count, type: Integer
       has_attribute :updated_at, type: Time
+      has_attribute :last_updated, type: Time
+      has_attribute :language
+      has_attribute :name
+      has_attribute :status
 
       def thumbnail_url(size = :default)
         thumbnails.fetch(size.to_s, {})['url']
