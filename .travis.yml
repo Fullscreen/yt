@@ -1,6 +1,7 @@
 language: ruby
 notifications:
   email: true
+cache: bundler
 matrix:
   include:
   - rvm: 2.6.3
